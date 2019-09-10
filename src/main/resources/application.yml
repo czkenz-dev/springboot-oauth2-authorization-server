@@ -1,4 +1,4 @@
-# keytool -genkeypair -alias mytestkey -keyalg RSA -keypass changeme -keystore keystore.jks -storepass letmein
+# keytool -genkeypair -alias mytestkey -keyalg RSA -keypass letmein -keystore keystore.jks -storepass letmein -deststoretype pkcs12
 # keytool -list -rfc --keystore keystore.jks | openssl x509 -inform pem -pubkey -noout
 
 security:
@@ -6,7 +6,7 @@ security:
     key-store: classpath:keystore.jks
     key-store-password: letmein
     key-pair-alias: mytestkey
-    key-pair-password: changeme
+    key-pair-password: letmein
 
 spring:
   h2:
