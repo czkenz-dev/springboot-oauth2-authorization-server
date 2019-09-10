@@ -1,3 +1,5 @@
+# keytool -genkeypair -alias mytestkey -keyalg RSA -keypass changeme -keystore keystore.jks -storepass letmein
+
 security:
   jwt:
     key-store: classpath:keystore.jks
